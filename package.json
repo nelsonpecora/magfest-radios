@@ -1,0 +1,23 @@
+{
+  "name": "magfest-radios",
+  "version": "1.0.0",
+  "description": "CLI node app to manage radios for magfest",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yoshokatana/magfest-radios.git"
+  },
+  "keywords": [
+    "magfest",
+    "node"
+  ],
+  "author": "Nelson Pecora",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yoshokatana/magfest-radios/issues"
+  },
+  "homepage": "https://github.com/yoshokatana/magfest-radios"
+}
