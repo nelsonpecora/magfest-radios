@@ -10,7 +10,7 @@ npm install magfest-radios
 
 ## Usage
 
-To start the script, simply type `npm start`.
+To start the script, simply type `./radio`.
 
 There are a few options. You can type a number or use arrow-up and arrow-down keys to select the option you want, then press enter. If you make a mistake, you can press `ESC` at any time to go back to the last screen/entry.
 
