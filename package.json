@@ -19,8 +19,14 @@
   "bugs": {
     "url": "https://github.com/yoshokatana/magfest-radios/issues"
   },
+  "bin": {
+    "radios": "index.js"
+  },
   "homepage": "https://github.com/yoshokatana/magfest-radios",
   "dependencies": {
-    "commander": "^2.6.0"
+    "chalk": "^0.5.1",
+    "commander": "^2.6.0",
+    "node-range": "0.0.2",
+    "prompt": "^0.2.14"
   }
 }

@@ -8,6 +8,16 @@ CLI node app to manage radios for magfest
 npm install magfest-radios
 ```
 
+Then you need to tell it how many radios you have available. You can do this with a range, or comma-separated values. You can also remove radios if needed.
+
+```
+cd magfest-radios
+./radio --add 1-100,102
+./radio --remove 55,56,57
+```
+
+The `--add` and `--remove` arguments can be shortened to `-a` and `-r`, respectively.
+
 ## Usage
 
 To start the script, simply type `./radio`.
