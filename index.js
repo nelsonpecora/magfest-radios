@@ -4,7 +4,8 @@
 var program = require('commander'),
   pkg = require('./package.json'),
   chalk = require('chalk'),
-  checkRadios = require('./lib/check-radios');
+  addRemove = require('./lib/add-remove'),
+  mainScreen = require('./lib/main-screen');
 
 function showTitle() {
   console.log(chalk.green(
@@ -22,7 +23,7 @@ function showTitle() {
     '/ ___\\ \\ / / ___|_   _| ____|  \\/  |        \n' +
     '\\___  \\ V /\\___ \\ | | |  _| | |\\/| |        \n' +
     ' ___) || |  ___) || | | |___| |  | |        \n' +
-    '|____/ |_| |____/ |_| |_____|_|  |_|        '
+    '|____/ |_| |____/ |_| |_____|_|  |_|       \n'
     ));
 }
 
@@ -35,8 +36,9 @@ program.parse(process.argv);
 
 if (program.add || program.remove) {
   // see if they want to modify radios
-  checkRadios(program);
+  addRemove(program);
 } else {
   showTitle();
   // ok, start the actual program
+  mainScreen();
 }
