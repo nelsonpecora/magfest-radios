@@ -38,7 +38,7 @@ program.parse(process.argv);
 
 if (program.list) {
   // just list the radios currently in the system, then exit
-  let radios = radioData.readRadios();
+  let radios = radioData.list();
 
   if (radios.length === 0) {
     console.log('There are currently ' + chalk.red(radios.length) + ' radios in the system.');

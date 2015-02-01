@@ -28,6 +28,7 @@
     "commander": "^2.6.0",
     "inquirer": "^0.8.0",
     "lodash": "^3.0.1",
-    "node-range": "0.0.2"
+    "node-range": "0.0.2",
+    "phone-formatter": "0.0.2"
   }
 }

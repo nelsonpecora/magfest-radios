@@ -61,6 +61,8 @@ This displays the amount of radios checked out vs. available, and lists how many
 
 TBD, but this script will read and write to JSON files, so it's offline-proof.
 
+* logs are stored in `data/tmp/logs` by date
+
 ## License
 
 Copyright (c) 2015, Nelson Pecora. (MIT License)
