@@ -5,6 +5,7 @@ var program = require('commander'),
   pkg = require('./package.json'),
   chalk = require('chalk'),
   addRemove = require('./lib/add-remove'),
+  radioData = require('./lib/radio-data'),
   mainScreen = require('./lib/main-screen');
 
 function showTitle() {
@@ -30,11 +31,16 @@ function showTitle() {
 program
   .version(pkg.version)
   .option('-a, --add <items>', 'Add radios, e.g. 1-10 or 12,13')
-  .option('-r, --remove <items>', 'Remove radios, e.g. 3,4 or 1-6');
+  .option('-r, --remove <items>', 'Remove radios, e.g. 3,4 or 1-6')
+  .option('-l, --list', 'List all radios currently in the system');
 
 program.parse(process.argv);
 
-if (program.add || program.remove) {
+if (program.list) {
+  let radios = radioData.readRadios();
+  console.log('There are currently ' + chalk.yellow(radios.length) + ' radios in the system:');
+  console.log('Numbers: ' + radios.join(' '));
+} else if (program.add || program.remove) {
   // see if they want to modify radios
   addRemove(program);
 } else {
