@@ -29,8 +29,8 @@ There are a few options. You can type a number or use arrow-up and arrow-down ke
 1. Radio #
 2. Name _(allows tab completion on names that have already checked out a radio)_
 3. Dept _(allows tab completion)_
-4. Phone #
-5. Badge # (new)
+4. Phone # _(if user doesn't aready exist)_
+5. Badge # _(if user doesn't aready exist)_
 
 ### Check in
 
@@ -59,9 +59,12 @@ This displays the amount of radios checked out vs. available, and lists how many
 
 ## Technical Details
 
-TBD, but this script will read and write to JSON files, so it's offline-proof.
+* departments are version controlled and stored in `data/departments.json`. You currently can't add departments, but this will work in the future
+* radios and users are stored in json files in `data/tmp`. Note: Users aren't necessarily tied to a specific department, so that relation isn't stored.
+* current checkouts are stored in `data/tmp/checkouts.json`. This data contains radio numbers, user names, department names, and checkout time.
+* logs are stored in `data/tmp/logs` by date (e.g. `2015-02-01.log`). Logging is kept to a minimum to save space, but the logfiles are very readable.
 
-* logs are stored in `data/tmp/logs` by date
+Currently it's reading and writing to json for almost everything, and it's doing it synchonously. This is the worst. After basic functionality is added I'll make it async.
 
 ## License
 
