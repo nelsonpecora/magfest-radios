@@ -12,7 +12,7 @@ Then you need to tell it how many radios you have available. You can do this wit
 
 ```
 cd magfest-radios
-./radio --add 1-100,102
+./radio --add 1-100
 ./radio --remove 55,56,57
 ```
 
