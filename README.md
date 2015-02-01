@@ -16,7 +16,7 @@ cd magfest-radios
 ./radio --remove 55,56,57
 ```
 
-The `--add` and `--remove` arguments can be shortened to `-a` and `-r`, respectively.
+The `--add` and `--remove` arguments can be shortened to `-a` and `-r`, respectively. To see how many radios are currently in the system, simply type `./radio --list` or `./radio -l`.
 
 ## Usage
 
