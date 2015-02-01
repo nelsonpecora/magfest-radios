@@ -31,7 +31,6 @@ There are a few options. You can type a number or use arrow-up and arrow-down ke
 3. Dept _(allows tab completion)_
 4. Phone #
 5. Badge # (new)
-6. Notes (new, optional)
 
 ### Check in
 

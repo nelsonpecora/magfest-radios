@@ -4,9 +4,9 @@
 var program = require('commander'),
   pkg = require('./package.json'),
   chalk = require('chalk'),
-  addRemove = require('./lib/add-remove'),
-  radioData = require('./lib/radio-data'),
-  mainScreen = require('./lib/main-screen');
+  addRemove = require('./lib/services/add-remove'),
+  radioData = require('./lib/services/radio-data'),
+  mainScreen = require('./lib/menus/main-screen');
 
 function showTitle() {
   console.log(chalk.green(
@@ -37,9 +37,18 @@ program
 program.parse(process.argv);
 
 if (program.list) {
+  // just list the radios currently in the system, then exit
   let radios = radioData.readRadios();
-  console.log('There are currently ' + chalk.yellow(radios.length) + ' radios in the system:');
-  console.log('Numbers: ' + radios.join(' '));
+
+  if (radios.length === 0) {
+    console.log('There are currently ' + chalk.red(radios.length) + ' radios in the system.');
+  } else if (radios.length === 1) {
+    console.log('There is currently ' + chalk.yellow(radios.length) + ' radio in the system.');
+    console.log('Number: ' + radios.join(' '));
+  } else {
+    console.log('There are currently ' + chalk.yellow(radios.length) + ' radios in the system.');
+    console.log('Numbers: ' + radios.join(' '));
+  }
 } else if (program.add || program.remove) {
   // see if they want to modify radios
   addRemove(program);
