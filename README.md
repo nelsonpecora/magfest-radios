@@ -1,5 +1,7 @@
 # magfest-radios
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/nelsonpecora/magfest-radios.svg)](https://greenkeeper.io/)
+
 CLI node app to manage radios for magfest
 
 ## Installation
